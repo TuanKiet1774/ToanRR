@@ -4,9 +4,12 @@ using namespace std;
 
 void Nhap(int a[max], int n)
 {
-	cout << "Nhap mang: ";
-	for(int i = 0; i<n; i++)
-		cin >> a[i];
+	if(n != 0)
+	{
+		cout << "Nhap mang: ";
+		for(int i = 0; i<n; i++)
+			cin >> a[i];
+	}
 }
 
 void Xuat(int a[max], int n)
