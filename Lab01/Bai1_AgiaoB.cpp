@@ -18,7 +18,7 @@ void Xuat(int a[max], int n)
 int checkAinB(int pt, int b[max], int m)
 {
 	for(int i = 0; i<m; i++)
-		if(b[i] == a) return 1;
+		if(b[i] == pt) return 1;
 	return 0;
 }
 
