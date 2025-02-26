@@ -15,7 +15,7 @@ void Xuat(int a[max], int n)
 		cout << a[i] << " ";
 }
 
-int checkAinB(int a, int b[max], int m)
+int checkAinB(int pt, int b[max], int m)
 {
 	for(int i = 0; i<m; i++)
 		if(b[i] == a) return 1;
