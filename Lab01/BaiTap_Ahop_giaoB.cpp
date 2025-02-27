@@ -24,10 +24,7 @@ void Xuat(int a[max], int n)
 {
 	for(int i = 0; i<n; i++)
 	{
-		if(i == n - 1)
-		{
-			cout << a[i];
-		}
+		if(i == n - 1) cout << a[i];
 		else cout << a[i] << " "; 
 	}
 }
@@ -36,8 +33,7 @@ void AgiaoB(int a[max], int n, int b[max], int m)
 {
 	int kq[max], k=0;
 	for(int i = 0; i<n; i++)
-		if(checkAinB(a[i],b,m)) 
-			kq[k++] = a[i];
+		if(checkAinB(a[i],b,m)) kq[k++] = a[i];
 			
 	if(k != 0) 
 	{
