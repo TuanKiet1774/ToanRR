@@ -1,54 +1,49 @@
-#include<iostream>
-#define max 1000
+#include <iostream>
+#include<string.h>
+#include <algorithm> 
 using namespace std;
 
-int checkAinB(int pt, int b[max], int m)
+bool Check(string a[], int n, string x) 
 {
-	for(int i = 0; i<m; i++)
-		if(b[i] == pt) return 1;
-	return 0;
+    for (int i = 0; i < n; i++) 
+		if (a[i] == x) return true;
+    return false;
 }
 
-void Nhap(int a[max], int n)
+void Hieu(string A[], int n, string B[], int m) 
 {
-	if(n != 0)
+    string kq[100];
+    int k = 0;
+    for (int i = 0; i < n; i++) 
+		if (!Check(B, m, A[i])) 
+        	kq[k++] = A[i];
+        	
+    if (k == 0) 
+		cout << "none";
+    else 
 	{
-		cout << "Nhap mang: ";
-		for(int i = 0; i<n; i++)
-			do cin >> a[i];
-			while (checkAinB(a[i],a,i));
-	}
+        sort(kq, kq + k); 
+        for (int i = 0; i < k; i++) 
+		{
+             if(i==k-1) cout << kq[i];
+			else cout << kq[i] << " ";
+        }
+    }
 }
-
-void Xuat(int a[max], int n)
+int main() 
 {
-	for(int i = 0; i<n; i++)
-		cout << a[i] << " ";
-}
-
-void AhieuB(int a[max], int n, int b[max], int m)
-{
-	int kq[max], k=0;
-	for(int i = 0; i<n; i++)
-		if(checkAinB(a[i],b,m) == 0)
-			kq[k++] = a[i];
-	if(k != 0)
-	{
-		cout << "A hieu B: ";
-		Xuat(kq,k); 
-	}
-	else cout << "A hieu B la tap rong";
-}
-
-int main()
-{
-	int a[max], b[max], n, m;
-	cout << "Do dai mang A: ";
-	cin >> n;
-	Nhap(a,n);
-	cout << "Do dai mang B: ";
-	cin >> m;
-	Nhap(b,m);
-	
-	AhieuB(a,n,b,m);
+    int n, m;
+    
+    cin >> n;
+    string A[100];
+    for (int i = 0; i < n; i++) 
+    	cin >> A[i];
+    	
+    cin >> m;
+    string B[100];
+    for (int i = 0; i < m; i++) 
+    	cin >> B[i];
+    	
+    Hieu(A, n, B, m);
+    return 0;
 }
