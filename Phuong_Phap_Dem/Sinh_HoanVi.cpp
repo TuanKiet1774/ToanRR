@@ -23,7 +23,8 @@ int SinhHoanVi(int a[], int n)
     return 1;
 }
 
-int main() {
+int main() 
+{
     int n;
     int a[1000];
     //cout << "Nhap n: ";
@@ -34,7 +35,7 @@ int main() {
         a[i] = i + 1;
 
     do 
-	{
+    {
         for (int i = 0; i < n; i++)
             cout << a[i];
             //cout << a[i] << " ";
