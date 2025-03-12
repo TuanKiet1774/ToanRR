@@ -57,6 +57,4 @@ int main()
 	cout << "none";
     else 
 	cout << ChinhHop(n, k);
-    
-    return 0;
 }
