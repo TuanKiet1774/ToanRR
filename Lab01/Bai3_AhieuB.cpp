@@ -3,10 +3,10 @@
 #include <algorithm> 
 using namespace std;
 
-bool Check(string a[], int n, string x) 
+bool Check(string b[], int m, string pt) 
 {
-    for (int i = 0; i < n; i++) 
-	if (a[i] == x) return true;
+    for (int i = 0; i < m; i++) 
+	if (b[i] == pt) return true;
     return false;
 }
 
