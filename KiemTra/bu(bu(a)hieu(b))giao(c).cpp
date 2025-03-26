@@ -11,7 +11,7 @@ int checkAinB(string pt, string b[max], int m)
 	return 0;
 }
 
-int AgiaoB(string a[max], int n, string b[max], int m, string kq[max])
+void AgiaoB(string a[max], int n, string b[max], int m, string kq[max])
 {
 	int k=0;
 	for(int i = 0; i<n; i++)
@@ -25,10 +25,9 @@ int AgiaoB(string a[max], int n, string b[max], int m, string kq[max])
 		{
 			if(i==k-1) cout << kq[i];
 			else cout << kq[i] << " ";
-        }
+        	}
 	}
 	else cout << "none";
-	return k;
 }
 
 int AhopB(string a[max], int n, string b[max], int m, string kq[max])
@@ -42,15 +41,7 @@ int AhopB(string a[max], int n, string b[max], int m, string kq[max])
 		if(checkAinB(b[i],kq,k) == 0)
 			kq[k++] = b[i];
 	if(k != 0)
-	{
 		sort(kq,kq+k);
-//		for (int i = 0; i < k; i++) 
-//		{
-//			if(i==k-1) cout << kq[i];
-//			else cout << kq[i] << " ";
-//        }
-	}
-//	else cout << "none";
 	return k;
 }
 
@@ -62,11 +53,11 @@ int main()
 	for (int i = 0; i < n; i++) 
     	cin >> a[i];
     	
-    cout << "Nhap m: "; cin >> m;
+    	cout << "Nhap m: "; cin >> m;
 	for (int i = 0; i < m; i++) 
     	cin >> b[i];
     
-    cout << "Nhap x: "; cin >> x;
+    	cout << "Nhap x: "; cin >> x;
 	for (int i = 0; i < x; i++) 
     	cin >> c[i];
 	
