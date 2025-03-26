@@ -19,19 +19,11 @@ int AgiaoB(string a[max], int n, string b[max], int m, string kq[max])
 			kq[k++] = a[i];
 			
 	if(k != 0) 
-	{
 		sort(kq,kq+k);
-//		for (int i = 0; i < k; i++) 
-//		{
-//			if(i==k-1) cout << kq[i];
-//			else cout << kq[i] << " ";
-//        }
-	}
-//	else cout << "none";
 	return k;
 }
 
-int Hieu(string a[max], int n, string b[max], int m, string kq[max]) 
+void Hieu(string a[max], int n, string b[max], int m, string kq[max]) 
 {
     int k = 0;
     for (int i = 0; i < n; i++) 
@@ -43,13 +35,12 @@ int Hieu(string a[max], int n, string b[max], int m, string kq[max])
     else 
     {
        	sort(kq, kq + k); 
-       	for (int i = 0; i < k; i++) {
-			if(i == k-1) cout << kq[i];
-			else cout << kq[i] << " ";
+       	for (int i = 0; i < k; i++) 
+	{
+		if(i == k-1) cout << kq[i];
+		else cout << kq[i] << " ";
         }
     }
-    
-    return k;
 }
 
 int main()
@@ -58,17 +49,17 @@ int main()
 	int n, m, x;
 	cout << "Nhap n: "; cin >> n;
 	for (int i = 0; i < n; i++) 
-    	cin >> a[i];
-    	
-    cout << "Nhap m: "; cin >> m;
+	cin >> a[i];
+	
+	cout << "Nhap m: "; cin >> m;
 	for (int i = 0; i < m; i++) 
-    	cin >> b[i];
-    
-    cout << "Nhap x: "; cin >> x;
+	cin >> b[i];
+	
+	cout << "Nhap x: "; cin >> x;
 	for (int i = 0; i < x; i++) 
-    	cin >> c[i];
+	cin >> c[i];
     
-    int k = AgiaoB(b,m,c,x,giao);
-    Hieu(a,n,giao,k,hieu);
+	int k = AgiaoB(b,m,c,x,giao);
+	Hieu(a,n,giao,k,hieu);
 }
 //(a)hieu((b)giao(c))
