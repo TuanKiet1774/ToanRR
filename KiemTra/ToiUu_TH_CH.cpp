@@ -1,4 +1,4 @@
-//To hop chap k cua n
+//Toi uu to hop va chinh hop
 #include <iostream>
 #include <string>
 
@@ -61,7 +61,7 @@ string Chia(string n1, int n2)
     }
     
     while (kq.size() > 1 && kq[0] == '0') 
-	kq.erase(0, 1); //Xóa 1 ký t? t?i v? trí 0, t?c là lo?i b? ký t? '0' d?u tiên c?a chu?i
+	kq.erase(0, 1);
     return kq;
 }
 
