@@ -1,3 +1,6 @@
+//Tính số cạnh của đồ thị
+//Nếu đồ thị vô hướng thì ==> Số cạnh = (Tổng số cạnh - Số cạnh khuyên) / 2 + Số cạnh khuyên
+//Nếu đồ thị có hướng thì ==> Số cạnh = Tổng số cạnh 
 #include<iostream>
 using namespace std;
 
