@@ -1,3 +1,8 @@
+//Liệt kê bán bậc hoặc bậc của từng đỉnh
+//Nếu đồ thị vô hướng thì số bậc = số cạnh
+//Nêu đồ thị có hướng thì:
+//+ Số bậc ra = Số cạnh từ đỉnh đó đi ra đỉnh khác
+//+ Số bậc vào = Số cạnh từ đỉnh khác đi vào đỉnh đó
 #include<iostream>
 using namespace std;
 
