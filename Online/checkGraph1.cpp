@@ -62,7 +62,7 @@ int main()
 {
 	int a[100][100];
 	int n;
-	cout << "Nhap n: ";
+	//cout << "Nhap n: ";
 	cin >> n;
 	
 	for(int i = 0; i<n; i++)
