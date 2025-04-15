@@ -1,3 +1,4 @@
+//Kiểm tra một đồ thị có là độ thi vô hướng hay đồ thị có hướng
 #include<iostream>
 using namespace std;
 
