@@ -1,4 +1,7 @@
 //Kiểm tra một đồ thị có là độ thi vô hướng hay đồ thị có hướng
+//Nếu các phần tử của ma trận 
+//+ Không đối xứng => Đồ thị có hướng
+//+ Đối xứng => Đồ thị vô hướng
 #include<iostream>
 using namespace std;
 
@@ -35,5 +38,3 @@ int main()
 	else cout << "co_huong";
 }
 
-//Khong doi xung => Co huong
-//Doi xung => Vo huong
