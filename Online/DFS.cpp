@@ -43,18 +43,21 @@ void findWay(int S, int T, int kq[], int k) {
     if (!tham[T]) 
 	    cout << "Khong tim thay duong di tu " << S << " den " << T << ".\n";
     else{
-	    int ht = T;
-	    while (ht != -1) {
-		kq[k++] = ht;
-		ht = cha[ht];
-	    }
-	
-	    reverse(kq, kq + k);
-	    
-	    cout << "Duong di tu " << S << " den " << T << " la: ";
-	    for (int i = 0; i < k; i++)
-		cout << kq[i] << " ";
-	    cout << endl;
+    int ht = T;
+    while (ht != -1) {
+	kq[k++] = ht;
+	ht = cha[ht];
+    }
+
+    reverse(kq, kq + k);
+    
+    cout << "Duong di tu " << S << " den " << T << " la: ";
+    for (int i = 0; i < k; i++){
+	if(i != k - 1)
+		cout << kq[i] << " => ";
+	else cout << kq[i];
+    }
+    cout << endl;
     }		
 }
 
