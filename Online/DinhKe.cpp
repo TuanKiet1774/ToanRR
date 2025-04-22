@@ -1,5 +1,4 @@
 #include <iostream>
-#include <algorithm>
 #define MAX 100
 using namespace std;
             
@@ -24,7 +23,6 @@ int main()
     		
     if(k != 0)
     {
-    	sort(kq, kq + k);
     	//cout << "Cac dinh ke voi dinh " << u << ": ";
     	for(int i = 0; i < k; i++)
     		cout << kq[i] <<" ";
