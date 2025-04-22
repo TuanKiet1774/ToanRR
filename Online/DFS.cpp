@@ -33,8 +33,6 @@ void DFS(int S)
             for (int v = n - 1; v >= 0; v--) {
                 if (G[u][v] && !tham[v]) {
                     stk.push(v);
-                    if (cha[v] == -1)
-                        cha[v] = u;
                 }
             }
         }
