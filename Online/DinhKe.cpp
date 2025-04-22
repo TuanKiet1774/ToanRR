@@ -30,3 +30,12 @@ int main()
     else 
 	cout << "none";
 }
+
+//Ví dụ:
+// So dinh: 4
+// 0 1 0 0
+// 1 0 1 1
+// 0 1 0 0
+// 0 1 0 0
+// Nhap dinh u: 2
+// Cac dinh ke voi dinh 2: 1
