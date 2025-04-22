@@ -33,8 +33,6 @@ void BFS(int S)
             for (int v = 0; v < n; v++) {
                 if (G[u][v] && !tham[v]) {
                     q.push(v);
-                    if (cha[v] == -1)
-                        cha[v] = u;
                 }
             }
         }
