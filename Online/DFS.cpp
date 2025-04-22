@@ -16,13 +16,11 @@ void DFS(int S)
     for (int i = 0; i < n; i++) 
 	tham[i] = false;
 
-    while (!stk.empty()) 
-	{
+    while (!stk.empty()){
         int u = stk.top();
         stk.pop();
 
-        if (!tham[u]) 
-		{
+        if (!tham[u]) {
             tham[u] = true;
             cout << u << " ";
 
