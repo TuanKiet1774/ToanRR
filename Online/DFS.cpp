@@ -5,8 +5,7 @@ using namespace std;
 #define MAX 100
 
 int G[MAX][MAX];     
-bool tham[MAX];      
-int cha[MAX];        
+bool tham[MAX];            
 int n;               
 
 void DFS(int S) 
@@ -15,10 +14,7 @@ void DFS(int S)
     stk.push(S);
 
     for (int i = 0; i < n; i++) 
-	{
-        tham[i] = false;
-        cha[i] = -1;
-    }
+	tham[i] = false;
 
     while (!stk.empty()) 
 	{
