@@ -5,8 +5,7 @@ using namespace std;
 #define MAX 100
 
 int G[MAX][MAX];     
-bool tham[MAX];      
-int cha[MAX];        
+bool tham[MAX];             
 int n;               
 
 void BFS(int S) 
@@ -15,10 +14,7 @@ void BFS(int S)
     q.push(S);
 
     for (int i = 0; i < n; i++) 
-    {
         tham[i] = false;
-        cha[i] = -1;
-    }
 
     while (!q.empty()) 
     {
