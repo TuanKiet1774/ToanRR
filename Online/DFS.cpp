@@ -25,7 +25,7 @@ void DFS(int S)
 
         if (!tham[u]) {
             tham[u] = true;
-		
+	    //cout << u << " ";
             for(int v = n - 1; v >= 0; v--) {
                 if (G[u][v] && !tham[v]) {
                     stk.push(v);
