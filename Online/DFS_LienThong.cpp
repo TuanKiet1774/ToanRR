@@ -36,7 +36,6 @@ void DFS(int S)
 int check_LienThong()
 {
 	DFS(0);
-
     bool flag = 1;
     for (int i = 0; i < n; i++) 
 	{
