@@ -11,20 +11,23 @@ int vc = INT_MAX;
 
 void Dijkstra(int G[100][100], int s)
 {
-    for (int i = 0; i < n; i++) {
-        if (G[s][i] == 0 && s != i) d[i] = vc;
-        else d[i] = G[s][i];
+    for (int i = 0; i < n; i++)	{
+        if (G[s][i] == 0 && s != i) 
+		d[i] = vc;
+        else 
+		d[i] = G[s][i];
 
-        if (G[s][i] < vc && s != i) truoc[i] = s;
-        else truoc[i] = -1;
-
+        if (G[s][i] < vc && s != i) 
+		truoc[i] = s;
+	else 
+		truoc[i] = -1;
         tham[i] = false;
     }
 
     d[s] = 0;
     tham[s] = true;
 
-    for (int i = 1; i < n; i++) {
+    for (int i = 1; i < n; i++)	{
         int u = -1, Min = vc;
         for (int j = 0; j < n; j++) {
             if (!tham[j] && d[j] < Min) {
@@ -37,7 +40,12 @@ void Dijkstra(int G[100][100], int s)
         tham[u] = true;
 
         for (int v = 0; v < n; v++) {
-            if (!tham[v] && G[u][v] != 0 && G[u][v] < vc && d[u] != vc && d[u] + G[u][v] < d[v]) {
+            if (!tham[v] && 
+		G[u][v] != 0 && 
+		G[u][v] < vc && 
+		d[u] != vc && 
+		d[u] + G[u][v] < d[v]) 
+	    {
                 d[v] = d[u] + G[u][v];
                 truoc[v] = u;
             }
@@ -47,10 +55,11 @@ void Dijkstra(int G[100][100], int s)
 
 void InDuong(int s, int v)
 {
-    if (v == s) {
+    if (v == s)	{
         cout << s;
         return;
     }
+    
     if (truoc[v] == -1) {
         cout << "none";
         return;
@@ -64,20 +73,15 @@ int main()
     int s;
     cin >> n;
     for (int i = 0; i < n; i++)
-        for (int j = 0; j < n; j++) {
-            cin >> G[i][j];
-//            if (G[i][j] == 0 && i != j)
-//                G[i][j] = vc;  // Kh�ng c� c?nh th� g�n b?ng v� c?c
-        }
+        for (int j = 0; j < n; j++) 
+        	cin >> G[i][j];
 
     cin >> s;
     Dijkstra(G, s);
 
-    for (int i = 0; i < n; i++) 
-	{
-        if (d[i] != vc)
-        {
-        	cout << i << "|";
+    for (int i = 0; i < n; i++) {
+        if (d[i] != vc){
+            cout << i << "|";
             cout << d[i] << "|";
             InDuong(s, i);
             cout << endl;
@@ -85,3 +89,13 @@ int main()
     }
 }
 
+//Ví dụ
+// n = 3
+// 0 0 5
+// 0 0 1
+// 5 1 0
+// s = 0
+//Kết quả: stt|độ dài ngắn nhất|vết đường đi
+// 0|0|0
+// 1|6|0->2->1
+// 2|5|0->2
