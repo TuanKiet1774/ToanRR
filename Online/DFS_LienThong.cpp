@@ -62,3 +62,7 @@ int main()
 
 }
 
+//Ví dụ
+// 3
+// 0 1 1 1 0 1 1 1 0
+//Kết quả: lien thong
