@@ -73,3 +73,10 @@ int main()
 		Bac(a,n);
 	else BacRaVao(a,n);
 }
+
+//Vi du:
+// 2
+// 0 1 0 0
+// Ket qua: 
+// 1;0
+// 0;1
